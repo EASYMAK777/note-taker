@@ -2,8 +2,9 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-var dbJson = require("./public/db/db.json")
-
+var dbJson = require("./db/db.json")
+var fs = require("fs");
+const { json } = require("express");
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -13,17 +14,23 @@ var PORT = process.env.PORT || 3777;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-
+ 
 // Routes
 
 
 // Basic route that sends the user first to the AJAX Page
 
-// Basic route that sends the user to the save notes page
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
-  });
+// // Basic route that sends the user to the save notes page
+// app.get("/", function(req, res) {
+//     res.sendFile(path.join(__dirname, "public/index.html"));
+//   });
   
+function writeToDb(res){
+  fs.writeFile("./db/db.json", JSON.stringify(dbJson),err =>{
+    if(err)throw err
+    res.sendStatus(200)
+  })
+}
 
 app.get("/notes", function(req, res) {
   res.sendFile(path.join(__dirname, "public/notes.html"));
@@ -35,14 +42,21 @@ app.get("/api/notes", function(req, res) {
 });
 
 // Displays a single character, or returns false
-app.post("/api/notes/:id", function(req, res) {
+app.post("/api/notes/", function(req, res) {
   
-
-  console.log(req,body);
+  //give a unique id 
+  req.body.id = 2
+  dbJson.push(req.body)
+  console.log(dbJson);
+  writeToDb(res)
 })
 
 app.delete("api/notes/:id", function(req,res) {
     res.sendFile("Delete at request of /user")
+    //grab id from url
+    //figure out what postion that id is in the array
+    // remove that postion in the array
+    //write local version of the db to the db.json
 })
 
 app.get("*", function (req,res){
