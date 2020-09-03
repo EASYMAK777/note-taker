@@ -1,8 +1,10 @@
 # note-taker
 
+
+
     ##Title
      
-    #Note taker app
+    Note taker app
 
     ## Description
 
@@ -45,7 +47,9 @@
 
   Contact me if you have questions at [GitHub](hittp:github.com/EASYMAK777) Or, email me at jplocallawncare@gmail.com.
 
-<iframe src="https://drive.google.com/file/d/11JXITtliXtJLy7Sb4drUXQcd1X1khSat/preview" width="640" height="480"></iframe>
+
+
+![note-taker-app-gif](./img/gif.gif);
 
     
 
