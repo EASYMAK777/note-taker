@@ -20,10 +20,7 @@ app.use(express.static("public"));
 
 // Basic route that sends the user first to the AJAX Page
 
-// // Basic route that sends the user to the save notes page
-// app.get("/", function(req, res) {
-//     res.sendFile(path.join(__dirname, "public/index.html"));
-//   });
+
   
 function writeToDb(res){
   fs.writeFile("./db/db.json", JSON.stringify(dbJson),err =>{
