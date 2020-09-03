@@ -25,7 +25,7 @@
 
   ## Installation
   
-  undefined
+  npm init using the terminal while in the file, npm install to install dependencies.  node server.js to launch on local server.
 
   ## Usage
 
@@ -39,12 +39,13 @@
   Juan Flores
 
   ## Tests
-  
+  https://blooming-bayou-43928.herokuapp.com/
 
   ## Questsions
 
-  Contact me if you have questions at [GitHub](hittp:github.com/undefined) Or, email me at undefined.
-    
+  Contact me if you have questions at [GitHub](hittp:github.com/EASYMAK777) Or, email me at jplocallawncare@gmail.com.
+
+<iframe src="https://drive.google.com/file/d/11JXITtliXtJLy7Sb4drUXQcd1X1khSat/preview" width="640" height="480"></iframe>
 
     
 
