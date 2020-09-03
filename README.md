@@ -49,7 +49,7 @@
 
 
 
-![note-taker-app-gif](./img/gif.gif);
+![note-taker-app-gif](./img/note-taker.gif);
 
     
 
