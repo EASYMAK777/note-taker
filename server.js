@@ -38,7 +38,7 @@ app.get("/api/notes", function(req, res) {
   return res.json(dbJson);
 });
 
-// Displays a single character, or returns false
+// saves new note to note taker
 app.post("/api/notes/", function(req, res) {
   
   //give a unique id 
